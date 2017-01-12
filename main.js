@@ -89,4 +89,33 @@ console.log('7. Chameleon changeColor method: ', chameleon.changeColor);
 
 chameleon.changeColor("yellow"); 
 console.log('8. New chameleon color: ', chameleon.color); 
+
+///-------OBJECT CONSTRUCTOR--------///
+
+var cherry = new Object(); 
+cherry.type="cherry"; 
+cherry.color="red"; 
+cherry.seed_type="pit";
+cherry.recipe_suggestion="eat out of hand, cherry pie";
+
+console.log('8. Create a fruit using new Object(): ', cherry); 
+
+///---CUSTOM OBJECT CONSTRUCTOR-----///
+
+function Fruit(type, color, seed_type, recipe_suggestion){
+	this.type = type;
+	this.color= color;
+	this.seed_type= seed_type; 
+	this.recipe_suggestion= recipe_suggestion;
+};
+
+var peach = new Fruit("peach", "orange", "pit", "peach cobbler"); 
+
+console.log('9. Create a fruit using a custom constructor: ', peach); 
+///-------------------------------------///
+
+///-------------------------------------///
+
+///-------------------------------------///
+
 ///-------------------------------------///
