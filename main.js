@@ -1,3 +1,7 @@
+///----------TRUTHY / FALSY------------///
+console.log('What are some examples of falsy values?'); 
+console.log('------> " ", 0, -0, null, undefined and false'); 
+///-------------------------------------///
 ///-------------CLOSURES-------------///
 console.log('CLOSURES'); 
 
@@ -52,9 +56,37 @@ function showSomething(){
 
 showSomething();
 
-console.log('5. Why does this give a ReferenceError?');
-console.log(kevinGillespie);   
+///-------------------HOISTING------------------------///
+///--FUNCTION DECLARATIONS VS. FUNCTION EXPRESSIONS---///
 
-///-------------------------------------///
-///-------------------------------------///
+function foo(){
+    function bar() {
+        return 3;
+    }
+    return bar();
+    function bar() {
+        return 8;
+    }
+}
+console.log('5. Hoisting function declarations: ', foo());
+
+///--------------THIS----------------///
+console.log("THIS KEYWORD:");
+console.log("It turns out we can make a method work for many objects using a new keyword, this. The keyword this acts as a placeholder, and will refer to whichever object called that method when the method is actually used.");
+
+var changeColor = function(newColor){
+	this.color = newColor;
+}; 
+
+var chameleon = new Object(); 
+chameleon.age=2; 
+chameleon.name="Buster"; 
+chameleon.color="green"; 
+chameleon.changeColor=changeColor; 
+
+console.log('6. Chameleon color: ', chameleon.color); 
+console.log('7. Chameleon changeColor method: ', chameleon.changeColor); 
+
+chameleon.changeColor("yellow"); 
+console.log('8. New chameleon color: ', chameleon.color); 
 ///-------------------------------------///
