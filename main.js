@@ -114,8 +114,68 @@ var peach = new Fruit("peach", "orange", "pit", "peach cobbler");
 console.log('9. Create a fruit using a custom constructor: ', peach); 
 ///-------------------------------------///
 
-///-------------------------------------///
+function Rabbit(adjective) {
+    this.adjective = adjective;
+    this.describeMyself = function() {
+        console.log("I am a " + this.adjective + " rabbit");
+    };
+}
 
-///-------------------------------------///
+// now we can easily make all of our rabbits
 
+var rabbit1 = new Rabbit("fluffy");
+var rabbit2 = new Rabbit("happy");
+var rabbit3 = new Rabbit("sleepy");
+
+rabbit1.describeMyself(); 
+
+///-----------ARRAYS OF OBJECTS-------///
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+// add the last family member, "timmy", who is 6 years old
+
+///-----------Array to Object-----------///
+
+var employeeData = 
+[
+    [
+        ['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']
+    ],
+
+    [
+        ['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']
+    ]
+];
+
+function transformEmployeeData(array) {
+	var finalArray = []; 
+
+  for(var employee = 0; employee < array.length; employee++){
+  	var person = array[employee];
+  	var personObject = {};
+
+  	for(var item = 0; item < person.length; item++){
+  		var dataLine = person[item]; 
+  
+  		var property = dataLine[0]; 
+  		var value = dataLine[1]; 
+  		
+  		personObject[property] = value;
+  	}
+  	finalArray.push(personObject); 
+  }
+  console.log('HackReactor-Module0.1: Array to Object ----> Final answer: ', finalArray);
+}
+
+transformEmployeeData(employeeData); 
 ///-------------------------------------///

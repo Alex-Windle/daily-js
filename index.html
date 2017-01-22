@@ -12,6 +12,50 @@
   <p>"If you execute a function inside a function, a closure is created. Closure could return a function. Closures saves the state of the outer function variables (private vars) but do not expose them. You can hide implementation details with "encapsulation"." -ThatJSDude</p>
   <p>"Closures are frequently used in JavaScript for object data privacy, in event handlers and callback functions, and in partial applications, currying, and other functional programming patterns." -Eric Elliott</p>
   <p>Source: https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36#.30uvcioj2</p>
+  <h3>Hoisting</h3>
+  <h3>Making New Objects</h3>
+  <h3>Transforming an Array to an Object</h3>
+  <p>Write a function called "transformEmployeeData" that transforms some employee data from one format to another.
+
+The argument will look something like this:</p>
+
+<p>
+[
+    [
+        ['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']
+    ],
+    [
+        ['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']
+    ]
+]
+</p>
+
+<p>
+
+Given that input, the return value should look like this:
+</p>
+
+<p>
+[
+    {firstName: 'Joe', lastName: 'Blow', age: 42, role: 'clerk'},
+    {firstName: 'Mary', lastName: 'Jenkins', age: 36, role: 'manager'}
+]
+</p>
+
+<p>
+Note that the input may have a different number of rows or different keys than the given sample. 
+</p>
+<p>
+For example, let's say the HR department adds a "tshirtSize" field to each employee record. Your code should flexibly accommodate that.
+</p>
+<p>
+Starter Code :
+</p>
+<p>
+function transformEmployeeData(array) {
+  // your code here
+}</p>
+
   </body>
   <script src = "main.js"></script>
 </html>
